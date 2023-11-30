@@ -1,10 +1,10 @@
-import string
-
+import sys
+sys.path.append('..')
 import pygame
-from src import colours
-from src.Fonts import fonts
-from src.GameLogic.game import Game
-from src.GameLogic.word import Word
+import colours
+from Fonts import fonts
+from GameLogic.game import Game
+from GameLogic.word import Word
 
 LETTER_OFFSETS = {'I': (24, 18), 'J': (22, 18), 'M': (15, 18), 'W': (14, 18)}
 

@@ -1,6 +1,6 @@
 import string
 import pygame
-from src.GameLogic import word
+from GameLogic import word
 
 class Game:
     def __init__(self, answer: str = '', words: list = None, currentWord: str = ''):

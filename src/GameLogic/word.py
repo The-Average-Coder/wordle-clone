@@ -1,4 +1,7 @@
-from src import colours
+import sys
+sys.path.append('..')
+
+import colours
 
 class Word:
     def __init__(self, word: str, colours: list):

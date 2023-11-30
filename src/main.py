@@ -1,6 +1,9 @@
 import pygame
 import renderer
-from src.GameLogic import game
+import ctypes
+from GameLogic import game
+
+ctypes.windll.user32.SetProcessDPIAware()
 
 pygame.init()
 
