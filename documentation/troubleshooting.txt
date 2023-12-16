@@ -1,0 +1,1 @@
+Ensure setting 'Execute File In Dir' is enabled for opening the 'answers.txt' and 'words.txt' files
