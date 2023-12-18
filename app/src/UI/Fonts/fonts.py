@@ -2,4 +2,6 @@ import pygame
 
 pygame.font.init()
 
-letterBoxFont = pygame.font.Font('UI/Fonts/FranklinGothic.ttf', 34)
+guess_font = pygame.font.Font('UI/Fonts/FranklinGothic.ttf', 34)
+keyboard_font = pygame.font.Font('UI/Fonts/FranklinGothicCondensed.ttf', 22)
+special_keyboard_font = pygame.font.Font('UI/Fonts/FranklinGothicCondensed.ttf', 14)

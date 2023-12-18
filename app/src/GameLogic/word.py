@@ -6,21 +6,21 @@ class Word:
         self.colours = colours
 
 # Takes the submitted word + answer and returns a word object with all the letter colours
-def generateWord(word: str, answer: str):
-    letterList = [i for i in word]
-    answerLetterList = [i for i in answer]
-    colourList = [colours.DARK_GREY] * 5
+def generate_word_object(word: str, answer: str):
+    guess_letters = [i for i in word]
+    answer_letters = [i for i in answer]
+    colour_list = [colours.DARK_GREY] * 5
 
-    for i, (letter, answerLetter) in enumerate(zip(letterList, answerLetterList)):
+    for i, (letter, answerLetter) in enumerate(zip(guess_letters, answer_letters)):
         if letter == answerLetter:
-            letterList[i] = ''
-            answerLetterList[i] = ''
-            colourList[i] = colours.GREEN
-    for i, letter in enumerate(letterList):
+            guess_letters[i] = ''
+            answer_letters[i] = ''
+            colour_list[i] = colours.GREEN
+    for i, letter in enumerate(guess_letters):
         if letter == '':
             continue
-        if letter in answerLetterList:
-            answerLetterList.remove(letter)
-            colourList[i] = colours.YELLOW
+        if letter in answer_letters:
+            answer_letters.remove(letter)
+            colour_list[i] = colours.YELLOW
 
-    return Word(word, colourList)
+    return Word(word, colour_list)

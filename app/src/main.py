@@ -10,7 +10,7 @@ pygame.init()
 SCREEN_WIDTH = 1600
 SCREEN_HEIGHT = 900
 
-gameState = game.Game()
+game_state = game.Game()
 
 def main():
     screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
@@ -23,9 +23,9 @@ def main():
             if i.type == pygame.QUIT:
                 running = False
 
-        game.update(gameState, events)
+        game.update(game_state, events)
 
-        renderer.render(screen, gameState)
+        renderer.render(screen, game_state)
 
 
     pygame.quit()
