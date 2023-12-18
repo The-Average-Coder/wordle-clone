@@ -1,5 +1,5 @@
 # Byte-compiled / optimized / DLL files
 app/src/__pycache__/
 app/src/GameLogic/__pycache__/
-app/src/GameLogic/Fonts/__pycache__/
+app/src/UI/Fonts/__pycache__/
 app/src/UI/__pycache__/
