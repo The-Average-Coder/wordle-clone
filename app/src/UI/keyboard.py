@@ -25,11 +25,11 @@ class KeyboardElement:
                         (self.position[0] + letter_offset[0], self.position[1] + letter_offset[1]))
         else:
             pygame.draw.rect(screen, self.colour, pygame.Rect(self.position, (KEYBOARD_ELEMENT_WIDTH, KEYBOARD_ELEMENT_HEIGHT)), border_radius=4)
-            screen.blit(fonts.keyboard_font.render(self.letter.upper(), True, colours.BLACK if self.colour == colours.LIGHT_GREY else colours.WHITE),
+            screen.blit(fonts.keyboard_font.render(self.letter, True, colours.BLACK if self.colour == colours.LIGHT_GREY else colours.WHITE),
                         (self.position[0] + letter_offset[0], self.position[1] + letter_offset[1]))
 
 
-QWERTY_LETTERS = 'qwertyuiopasdfghjklzxcvbnm'
+QWERTY_LETTERS = 'qwertyuiopasdfghjklzxcvbnm'.upper()
 
 keyboard_offset = (555, 600)
 keyboard_element_positions = [(0, 0), (50, 0), (100, 0), (150, 0), (200, 0), (250, 0), (300, 0), (350, 0), (400, 0), (450, 0),
@@ -48,9 +48,9 @@ def render(screen: pygame.Surface, game_state: Game):
         word_colours = word.colours
         for i, letter in enumerate(word.word):
             if letter in letter_colours:
-                letter_colours[letter] = max(colour_priority.index(word_colours[i]), letter_colours[letter])
+                letter_colours[letter.upper()] = max(colour_priority.index(word_colours[i]), letter_colours[letter])
             else:
-                letter_colours[letter] = colour_priority.index(word_colours[i])
+                letter_colours[letter.upper()] = colour_priority.index(word_colours[i])
 
     for i in keyboard_elements:
         if i.letter in letter_colours:
